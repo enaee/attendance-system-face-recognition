@@ -4,4 +4,7 @@ class Student:
         self.encoding = encoding
         self.noTimesAttended = 0
 
+    def get_name (self):
+        return self.name
+
 
