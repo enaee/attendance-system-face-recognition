@@ -19,7 +19,7 @@ class Application(Frame):
         self.frame = Frame(master)
         self.frame_choose_video_source = LabelFrame(self, text='Choose Video source')
         self.student_frame = LabelFrame(self, text='Students')
-        self.lab = Label(self.frame_choose_video_source, text='Open video you want to check, or open camera!')
+        self.lab = Label(self.frame_choose_video_source, text='Open video you want to check!')
         self.labFileName = Label(self.frame_choose_video_source, text='No file is opened yet!')
         self.button_import = Button(self, text='Import student names', command=self.importDB) # calls importDB() method
         self.btnLoadVideo = Button(self.frame_choose_video_source, text='Otvori', command=self.open_video_file)  # calls open_video_file() method
@@ -182,6 +182,18 @@ class Application(Frame):
                 student = Student("UNKNOWN", [])
                 student.noTimesAttended = 1
                 self.students.append(student)
+
+
+    def how_many_apper_in_video(self, nameList, studName):
+        curentstudent = []
+        curentstudent[0] = studName
+        if curentstudent[0] == name:
+            curentstudent[1] += 1
+        if curentstudent[1] == 3:
+            if name not in nameList:
+                nameList.append(entry[0])
+                curentstudent[0]
+        return True
 
 
 
